@@ -108,7 +108,7 @@
 
 <body marginwidth="0" marginheight="0">
     <div class="mycanvas">
-        <canvas id="c" height="600" width="1000">
+        <canvas id="c" height="1200" width="1200">
     </div>
     <script>
         var collapsed = true;
@@ -138,8 +138,6 @@
         var a = c.getContext('2d');
         // document.body.clientWidth;
         console.log(document.body.clientWidth);
-        c.setAttribute("width", "100px")
-        c.setAttribute("height", "100px")
     </script>
 
     <script>
@@ -149,7 +147,7 @@
         U = 16;
         for (O = k = 0; x = z = j = i = k < 400;)
             with (M[k] = k ? c.cloneNode(0) : c) {
-                width = height = k ? 32 : W = 800;
+                width = height = k ? 32 : W = 1000;
                 with (getContext('2d'))
                 if (k > 10 | !k)
 
@@ -197,21 +195,21 @@
             for (
                 i = 0;
                 L = J[i++];
-                a.drawImage(M[L[3] + 1], (207 + L[0] * A + L[2] * M.sin(D) >> 0) * 2, L[1] >> 1)) {
+                a.drawImage(M[L[3] + 1], (207 + L[0] * A + L[2] * M.sin(D) >> 0) * 2, (L[1] >> 1)+350)) {
                 if (i == 2e3) {
                     a.fillText
-                        ('Light up the shadow', W/4, W / 2 + 140);
+                        ('Light up the shadow', W/4-50, 100);
                     a.fillText
-                        ('Moving to you', W/4+50, W / 2 + 190);
+                        ('Moving to you', W/4, 160);
                     a.fillText
-                        ('Merry Christmas!', W / 4, W / 2 + 250);
+                        ('Merry Christmas!', W / 4, W / 2 + 390);
 
                 }
 
                 if (!(i % 7))
                     a.drawImage(M[13],
                         (((157 * (i * i) + M.sin(D * 5 + i * i) * 5) % W) >> 0) * 2,
-                        ((113 * i + (D * i) / 60) % (290 + i / 99)) >> 0);
+                        (((113 * i + (D * i) / 60) % (290 + i / 99)) >> 0)+350);
             }
             D += .02
         }, 1)
